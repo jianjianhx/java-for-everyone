@@ -9,7 +9,6 @@
    frame.setSize(300, 300);
    frame.setTitle("Hello, World!");
    ```
-   
 2. How can a program display two frames at once?
 
    ```java
@@ -19,7 +18,6 @@
    frame1.setVisible(true);
    frame2.setVisible(true);
    ```
-   
 3. How can a program show a frame with two buttons labeled Yes and No?
 
    ```java
@@ -29,15 +27,12 @@
    frame.add(panel);
    // ...
    ```
-   
 4. Why does the `FilledFrameViewer2` class declare the frame variable to have class `JFrame`, not `FilledFrame`?
 
    There was no need to invoke any methods that are specific to `FilledFrame`. It is always a good idea to use the most general type when declaring a variable.
-
 5. How many Java source files are required by the application in Section 10.1.3 when we use inheritance to declare the frame class?
 
    Two: FilledFrameViewer2, FilledFrame.
-
 6. Why does the `createComponents` method of `FilledFrame` call `add(panel)`, whereas the main method of `FilledFrameViewer` calls `frame.add(panel)`?
 
    Because `add` is a method of `FilledFrame` inherited from `JFrame`.
@@ -47,19 +42,34 @@
 7. Which objects are the event source and the event listener in the `ButtonViewer` program?
 
    `button` object is the event source and `listener` object is the event listener.
-
 8. Why is it legal to assign a `ClickListener` object to a variable of type `ActionListener`?
 
    `ClickListener` implements `ActionListener` interface.
-
 9. When do you call the `actionPerformed` method?
 
    You don’t. The Swing library calls the method when the button is clicked.
-
 10. Why would an inner class method want to access a variable from a surrounding scope?
 
     Direct access is simpler than the alternative— passing the variable as an argument to a constructor or method.
-
 11. How do you place the "Balance: . . ." message to the left of the "Add Interest" button?
 
     Add `resultLabel` to `panel` object first.
+
+## 10.3 Processing Text Input
+
+12. What happens if you omit the first JLabel object in the program of Section 10.3.1?
+
+    Then the text field is not labeled. The user will not know its purpose.
+13. If a text field holds an integer, what expression do you use to read its contents?
+
+    `Integer.parseInt(textField.getText())`
+14. What is the difference between a text field and a text area?
+
+    A text field can only be single-line; a text area can be multi-line.
+15. Why did the InvestmentFrame3 program call resultArea.setEditable(false)?
+
+    Because you only want the text area to show the output. It shouldn't accept any input.
+16. How would you modify the InvestmentFrame3 program if you didn’t want to use
+    scroll bars?
+
+    Don't construct a `JScollPane` but add the `resultArea` to the panel directly.
