@@ -69,7 +69,51 @@
 15. Why did the InvestmentFrame3 program call resultArea.setEditable(false)?
 
     Because you only want the text area to show the output. It shouldn't accept any input.
-16. How would you modify the InvestmentFrame3 program if you didn’t want to use
+16. How would you modify the InvestmentFrame3 program if you didn't want to use
     scroll bars?
 
     Don't construct a `JScollPane` but add the `resultArea` to the panel directly.
+
+## 10.4 Creating Drawings
+
+17. How do you modify the program in Section 10.4.1 to draw two squares?
+
+    Use `g.drawRect` with equal width and height.
+18. What happens if you call fillOval instead fillRect in the program of
+    Section 10.4.1?
+
+    Get ovals with large width and small height.
+19. Give instructions to draw a circle with center (100, 100) and radius 25.
+
+    `g.drawCircle(75, 75, 50, 50)`
+20. Give instructions to draw a letter “V” by drawing two line segments.
+
+    ```java
+    g.drawLine(0, 0, 50, 100);
+    g.drawLine(50, 100, 100, 0);
+    ```
+21. Give instructions to draw a string consisting of the letter "V".
+
+    `g.drawString("Vector", 200, 50)`
+22. What are the RGB color values of `Color.BLUE`?
+
+    0, 0, 255
+23. How do you draw a yellow square on a red background?
+
+    ```java
+    g.setColor(Color.RED);
+    // draw rectangular background
+    g.setColor(Color.YELLOW);
+    // draw square
+    ```
+24. What would happen in the investment viewer program if we simply painted each bar as `g.fillRect(0, y, value, BAR_HEIGHT);` in the paintComponent method of the ChartComponent class?
+
+    All the bars would stretch all the way to the right of the component since they would be much longer than the component's width.
+25. What would happen if you omitted the call to repaint in the append method of the
+    ChartComponent class?
+
+    It will not repaint after you push the button.
+26. What would happen if you omitted the call to chart.setPreferredSize in the
+    InvestmentFrame4 constructor?
+
+    The chart will have 0 width and 0 height.
