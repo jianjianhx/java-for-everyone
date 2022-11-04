@@ -42,3 +42,27 @@
    What is mystery(4)?
 
    `mystery(4)` is 1x1 + 2x2 + 3x3 + 4x4 = 30.
+
+## 13.2 Problem Solving: Thinking Recursively
+
+6. Consider the task of removing all punctuation marks from a string. How can we break the string into smaller strings that can be processed recursively?
+
+   In this problem, any decomposition will work. We can remove the first or last character and then remove punctuation marks from the remainder. Or we can break the string in two substrings, and remove punctuation marks from each.
+7. In a recursive method that removes all punctuation marks from a string, we decide to remove the last character, then recursively process the remainder. How do you combine the results?
+
+   If the last character is a punctuation mark, then you simply return the shorter string with punctuation marks removed. Otherwise, reattach the last character to that result and return it.
+8.  How do you find solutions for the simplest inputs when removing punctuation marks from a string?
+
+   The simplest input is the empty string. It contains no punctuation marks, so you simply return it.
+9. Provide pseudocode for a recursive method that removes punctuation marks from a string, using the answers to Self Checks 6–8.
+
+   ```java
+   String removePunctuation(String str) {
+       if (str.length() == 0) { return str; }
+       else {
+           char last = str.charAt(str.length() - 1);
+           char last = Character.isLetter(last) ? last : '';
+           return removePunctuation(str.substring(0, str.length() - 1)) + last;
+       }
+   }
+   ```
