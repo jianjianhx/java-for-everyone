@@ -93,3 +93,15 @@
 16. To compute the sum of the values in an array, you can split the array in the middle, recursively compute the sum of the halves, and add the results. Compare the performance of this algorithm with that of a loop that adds the values.
 
    The performance is about the same.
+   
+## 13.5 Permutations
+
+17. What are all permutations of the four-letter word `beat`?
+
+   `beat beta baet bate btea btae ebat ebta eabt eatb etba etab abet abte aebt aetb atbe ateb tbea tbae teba teab tabe taeb`
+18. Our recursion of the permutation generator stops at the empty string. What simple modification would make the recursion stop at strings of 0 or 1?
+
+   `if (word.length() <= 1) { permutationList.add(word); }`
+19. Why isn't it easy to develop an iterative solution for the permutation generator?
+
+   An iterative solution would have a loop whose body computes the next permutation from the previous ones. But there is no obvious mechanism for getting the next permutation. For example, if you already found permutations `eat, eta` and `aet`, it is not clear how you use that information to get the next permutation.
