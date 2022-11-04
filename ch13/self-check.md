@@ -51,7 +51,7 @@
 7. In a recursive method that removes all punctuation marks from a string, we decide to remove the last character, then recursively process the remainder. How do you combine the results?
 
    If the last character is a punctuation mark, then you simply return the shorter string with punctuation marks removed. Otherwise, reattach the last character to that result and return it.
-8.  How do you find solutions for the simplest inputs when removing punctuation marks from a string?
+8. How do you find solutions for the simplest inputs when removing punctuation marks from a string?
 
    The simplest input is the empty string. It contains no punctuation marks, so you simply return it.
 9. Provide pseudocode for a recursive method that removes punctuation marks from a string, using the answers to Self Checks 6–8.
@@ -77,7 +77,19 @@
    When `start` is greater than or equal to `end`.
 12. To compute the sum of the values in an array, add the first value to the sum of the remaining values, computing recursively. Of course, it would be inefficient to set up and actual array of the remaining values. Which recursive helper method can solve the problem?
 
-   `int sum(int[] arr, int start, int end)`
+   int sum(int[] arr, int start, int end)`
 13. How can you write a recursive method `public static void sum(int[] a)` without needing a helper function?
 
    Create new smaller arrays every time before calling the function recursively.
+   
+## 13.4 The Efficiency of Recursion
+
+14. Is it faster to compute the triangle numbers recursively, as shown in Section 13.1, or is it faster to use a loop?
+
+   The loop is slightly faster. It is even faster to simply compute `width * (width + 1) / 2`.
+15. You can compute the factorial function either with a loop, using the definition that $n! = 1 \times 2 \times \ldots \times n$, or recursively, using the definition that $0! = 1$ and $n! = (n-1)! \times n$. Is the recursive approach inefficient in this case?
+
+   No.
+16. To compute the sum of the values in an array, you can split the array in the middle, recursively compute the sum of the halves, and add the results. Compare the performance of this algorithm with that of a loop that adds the values.
+
+   The performance is about the same.
