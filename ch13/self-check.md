@@ -66,3 +66,18 @@
        }
    }
    ```
+
+## 13.3 Recursive Helper Method
+
+10. Do we have to give the same name to both `isPalindrome` methods?
+
+   No.
+11. When does the recursive `isPalindrome` method stop calling itself?
+
+   When `start` is greater than or equal to `end`.
+12. To compute the sum of the values in an array, add the first value to the sum of the remaining values, computing recursively. Of course, it would be inefficient to set up and actual array of the remaining values. Which recursive helper method can solve the problem?
+
+   `int sum(int[] arr, int start, int end)`
+13. How can you write a recursive method `public static void sum(int[] a)` without needing a helper function?
+
+   Create new smaller arrays every time before calling the function recursively.
