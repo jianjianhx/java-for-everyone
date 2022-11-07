@@ -105,3 +105,15 @@
 19. Why isn't it easy to develop an iterative solution for the permutation generator?
 
    An iterative solution would have a loop whose body computes the next permutation from the previous ones. But there is no obvious mechanism for getting the next permutation. For example, if you already found permutations `eat, eta` and `aet`, it is not clear how you use that information to get the next permutation.
+   
+## 13.6 Mutual Recursion
+
+20. What is the difference between a term and a factor? Why do we need both concepts?
+
+   Factors are combined by multiplicative operators `*` and `/;` terms are combined by additive operators `+` and `-`. We need both so that multiplication can bind more strongly than addition.
+21. Why does the expression evaluator use mutual recursion?
+
+   To handle parenthesized expressions, such as `2+3*(4+5)`. The subexpression `4+5` is handled by a recursive call to `getExpressionValue`.
+22. What happens if you try to evaluate the illegal expression `3+4*)5`? Specifically, which method throws an exception?
+
+   The `Integer.parseInt` call in `getFactorValue` throws an exception when it is given the string.
