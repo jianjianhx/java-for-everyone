@@ -117,3 +117,15 @@
 22. What happens if you try to evaluate the illegal expression `3+4*)5`? Specifically, which method throws an exception?
 
    The `Integer.parseInt` call in `getFactorValue` throws an exception when it is given the string.
+   
+## 13.7 Backtracking
+
+23. Why does `j` begin at `i + 1` in the examine method?
+
+   We want to check whether any queen[i] attacks any queen[j], but attacking is symmetric.
+24. Continue tracing the four queens problem as shown in Figure 5. How many solutions are there with the first queen in position a2?
+
+   One solution.
+25. How many solutions are there altogether for the four queens problem?
+
+   Two solutions.
