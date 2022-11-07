@@ -2,7 +2,7 @@ package ch13;
 
 public class Backtracking {
     public static void main(String[] args) {
-        solve(new EightQueensSolution(0));
+        solve(new NQueenSolution(0, 4));
     }
 
     /**

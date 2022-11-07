@@ -2,16 +2,17 @@ package ch13;
 
 import java.util.Arrays;
 
-public class EightQueensSolution implements PartialSolution {
+public class NQueenSolution implements PartialSolution {
     private final Queen[] queens;
-    private static final int N_QUEENS = 8;
+    private final int nQueens;
 
     /**
      * Constructs a solution of queens of a given size
      * @param size the size
      */
-    public EightQueensSolution(int size) {
+    public NQueenSolution(int size, int n) {
         queens = new Queen[size];
+        nQueens = n;
     }
 
     @Override
@@ -21,18 +22,18 @@ public class EightQueensSolution implements PartialSolution {
                 if (queens[i].attacks(queens[j])) { return ABANDON; }
             }
         }
-        if (queens.length == N_QUEENS) { return ACCEPT; }
+        if (queens.length == nQueens) { return ACCEPT; }
         else { return CONTINUE; }
     }
 
     @Override
     public PartialSolution[] extend() {
-        EightQueensSolution[] result = new EightQueensSolution[N_QUEENS];
+        NQueenSolution[] result = new NQueenSolution[nQueens];
         for (int i = 0; i < result.length; i++) {
             int size = queens.length;
 
             // The new solution has one more row than this one
-            result[i] = new EightQueensSolution(size + 1);
+            result[i] = new NQueenSolution(size + 1, nQueens);
 
             // Copy this solution into the new one
             System.arraycopy(queens, 0, result[i].queens, 0, size);
