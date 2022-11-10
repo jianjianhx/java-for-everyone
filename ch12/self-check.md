@@ -41,3 +41,12 @@
 12. In a library management system, what would be the relationship between classes `Patron` and `Author`?
 
    There's no relationship.
+
+## 12.3 Application: Printing an Invoice
+
+13. Which class is responsible for computing the amount due? What are its collaborators for this task?
+
+   The `Invoice` class is responsible for computing the amount due. It collaborates with the `LineItem` class.
+14. Why do the format methods return `String` objects instead of directly printing to `System.out`?
+
+   This design decision reduces coupling. It enables us to reuse the classes when we want to show the invoice in a dialog box or on a web page.
