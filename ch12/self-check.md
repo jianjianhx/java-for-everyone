@@ -34,19 +34,35 @@
    If a class doesn't depend on another, it is not affected by interface changes in the other class.
 10. In an e-mail system, messages are stored in a mailbox. Draw a UML diagram that shows the appropriate aggregation relationship.
 
-   `Mailbox` <>---- `Message`
+    `Mailbox` <>---- `Message`
 11. You are implementing a system to manage a library, keeping track of which books are checked out by whom. Should the `Book` class aggregate `Patron` or the other way around?
 
-   Typically, a library system wants to track which books a patron has checked out, so it makes more sense to have `Patron` aggregate `Book`. However, there is not always one true answer in design. If you feel strongly that it is important to identify the patron who checked out a particular book, then you can argue that the aggregation should go the other way around.
+    Typically, a library system wants to track which books a patron has checked out, so it makes more sense to have `Patron` aggregate `Book`. However, there is not always one true answer in design. If you feel strongly that it is important to identify the patron who checked out a particular book, then you can argue that the aggregation should go the other way around.
 12. In a library management system, what would be the relationship between classes `Patron` and `Author`?
 
-   There's no relationship.
+    There's no relationship.
 
 ## 12.3 Application: Printing an Invoice
 
 13. Which class is responsible for computing the amount due? What are its collaborators for this task?
 
-   The `Invoice` class is responsible for computing the amount due. It collaborates with the `LineItem` class.
+    The `Invoice` class is responsible for computing the amount due. It collaborates with the `LineItem` class.
 14. Why do the format methods return `String` objects instead of directly printing to `System.out`?
 
-   This design decision reduces coupling. It enables us to reuse the classes when we want to show the invoice in a dialog box or on a web page.
+    This design decision reduces coupling. It enables us to reuse the classes when we want to show the invoice in a dialog box or on a web page.
+   
+## 12.4 Packages
+
+15. Which of the following are packages?
+    1. java
+    2. java.lang
+    3. java.util
+    4. java.lang.Math
+
+    `java.lang` and `java.util`.
+16. Is a Java program without `import` statements limited to using the default and `java.lang` packages?
+
+    No, you can simply use fully qualified names for all other classes, such `java.util.Random` and `java.awt.Rectangle`.
+17. Suppose your homework assignments are located in the directory `/home/me/cs101`. Your instructor tells you to place your homework into packages. In which directory do you place the class `hw1.problem1.TicTacToeTester`?
+
+    `/home/me/cs101/hw1/problem1`.
