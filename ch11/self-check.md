@@ -75,3 +75,13 @@
 16. In this program, the font specification (name, size, and style) is stored in instance variables. Why was this not necessary in the program of the previous section.
 
     In the previous program, the user-interface components effectively served as storage for the font specification. Their current settings were used to construct the font. But a menu doesn't save settings; it just generates an action.
+
+## 11.4 Exploring the Swing Documentation
+
+17. Suppose you want to allow users to pick a color from a color dialog box. Which class would you use? Look in the API documentation.
+
+    `JColorChooser`.
+
+18. Why does a slider emit change events and not action events?
+
+    Action events describe one-time changes, such as button clicks. Change events describe continuous changes.
