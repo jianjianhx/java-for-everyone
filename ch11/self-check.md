@@ -53,3 +53,25 @@
 11. How could the following user interface be improved?
 
     Instead of using radio buttons with two choices, use a checkbox.
+
+## 11.3 Menus
+
+12. Why do `JMenu` objects not generate action events?
+
+    When you open a menu, you have not yet made a selection. Only `JMenuItem` objects correspond to selections.
+
+13. Can you add a menu item directly to the menu bar? Try it out. What happens?
+
+    Yes, you can -- `JMenuItem` is a subclass of `JMenu`. The item shows up on the menu bar. When you click on it, its listener is called. But the behavior feels unnatural for a menu bar and is likely to confuse users.
+
+14. Why is the increment parameter variable in the `createSizeItem` method declared as `final`?
+
+    The parameter variable is accessed in a method of an inner class.
+
+15. Why can't the `createFaceItem` method simple set the `faceName` instance variable?
+
+    Then the `faceName` variable is set when the menu item is added to the menu, not when the user selects the menu.
+
+16. In this program, the font specification (name, size, and style) is stored in instance variables. Why was this not necessary in the program of the previous section.
+
+    In the previous program, the user-interface components effectively served as storage for the font specification. Their current settings were used to construct the font. But a menu doesn't save settings; it just generates an action.
