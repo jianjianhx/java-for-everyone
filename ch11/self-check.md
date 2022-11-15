@@ -85,3 +85,29 @@
 18. Why does a slider emit change events and not action events?
 
     Action events describe one-time changes, such as button clicks. Change events describe continuous changes.
+
+## 11.5 Using Timer Events for Animations
+
+19. Why does a timer require a listener object?
+
+    The timer needs to call some method whenever the time interval expires. It calls the `actionPerformed` method of the listener object.
+
+20. How can you make the rectangle move backwards?
+
+    Call `scene.moveRectangleBy(-1, -1)` in the `actionPerformed` method.
+
+21. Describe two ways of modifying the program so that the rectangle moves twice as fast.
+
+    You can cut the timer delay in half (to 50 milliseconds between ticks), or you can double the distance by which the rectangle moves, by calling `scene.moveRectangleBy(2, 2)`.
+
+22. How can you make a car move instead of a rectangle?
+
+    The components class would need to draw a car at position (x, y) instead of a rectangle.
+
+23. How can you make two rectangles move in parallel in the scene?
+
+    Draw a second rectangle in the `paintComponent` method of `RectangleComponent`.
+
+24. What would happen if you omitted the call to `repaint` in the `moveRectangleBy` method?
+
+    The moved rectangle won't be painted, and the rectangle will appear to be stationary until the frame is repainted for an external reason.
