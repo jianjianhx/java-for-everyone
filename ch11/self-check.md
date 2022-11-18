@@ -111,3 +111,17 @@
 24. What would happen if you omitted the call to `repaint` in the `moveRectangleBy` method?
 
     The moved rectangle won't be painted, and the rectangle will appear to be stationary until the frame is repainted for an external reason.
+
+## 11.6 Mouse Events
+
+25. Why was the `moveRectangleBy` method in `RectangleComponent2` replaced with a `moveRectangleTo` method?
+
+    Because you know the current mouse position, not the amount by which the mouse has moved.
+
+26. Why must the `MousePressListener` class supply five method?
+
+    It implements the `MouseListener` interface, which has five methods.
+
+27. How could you change the behavior of the program so that a new rectangle is added whenever the mouse is clicked?
+
+    The `RectangleComponent2` class need to keep track of the locations of multiple rectangles. It can do that with an array list of `Point` or `Rectangle` objects. The `paintComponent` method needs to draw them all. Replace the `moveRectangleTo` method with an `addRectangleAt` method that adds a rectangle at a given `x, y` position.
