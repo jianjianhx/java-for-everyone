@@ -74,3 +74,13 @@
 15. The merge sort algorithm processes an array by recursively processing two halves. Describe a similar recursive algorithm for computing the sum of all elements in an array.
 
     Summing all elements by adding the sums of two halves.
+
+## 14.5 Analyzing the Merge Sort Algorithm
+
+16. Given the timing data for the merge sort algorithm in the table at the beginning of this section, how long would it take to sort an array of 100,000 values?
+
+    (100,000 * log(100,000)) / (10,000 * log(10,000)) = 10 * 5 / 4 = 12.5. So approximately 12.5 times as long as it takes to sort 10,000 values, which is 12.5 * 40 = 500 milliseconds.
+
+17. If you double the size of an array, how much longer will the merge sort algorithm take to sort the new array?
+
+    (2n * log(2n)) / (n * log(n))
