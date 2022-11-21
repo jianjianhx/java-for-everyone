@@ -53,3 +53,24 @@
 12. Consider this algorithm for sorting an array. Set $k$ to the length of the array. Find the maximum of first $k$ elements. Remove it, using the second algorithm of Section 6.3.6. Decrement $k$ and place the removed element into the $k$th position. Stop if $k$ is 1. What is the algorithm's running time in big-Oh notation?
 
     $O(n^2)$.
+
+## 14.4 Merge Sort
+
+13. Why does only one of the two `while` loops at the end of the `merge` method do any work?
+
+    Because the previous `while` loop will stop only if either `iFirst >= first.length` or `iSecond >= second.length`.
+
+14. Manually run the merge sort algorithm on the array `8 7 6 5 4 3 2 1`.
+
+    ```
+    8 7 6 5 4 3 2 1
+    8 7 6 5 | 4 3 2 1
+    8 7 | 6 5 | 4 3 | 2 1
+    7 8 | 5 6 | 3 4 | 1 2
+    5 6 7 8 | 1 2 3 4
+    1 2 3 4 5 6 7 8
+    ```
+
+15. The merge sort algorithm processes an array by recursively processing two halves. Describe a similar recursive algorithm for computing the sum of all elements in an array.
+
+    Summing all elements by adding the sums of two halves.
