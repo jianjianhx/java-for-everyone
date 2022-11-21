@@ -17,3 +17,13 @@
 4. Suppose we modified the selection sort algorithm to start at the end of the array, working toward the beginning. In each step, the current position is swapped with the minimum. What is the result of this modification?
 
    The result will be the elements sorted in descending order.
+
+## 14.2 Profiling the Selection Sort Algorithm
+
+5. Approximately how many seconds would it take to sort a data set of 80,000 values?
+
+   Four times as long as 40,000 values.
+
+6. Look at the graph at Figure. 1. What mathematical shape does it resemble?
+
+   A parabola.
