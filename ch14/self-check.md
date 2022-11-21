@@ -27,3 +27,29 @@
 6. Look at the graph at Figure. 1. What mathematical shape does it resemble?
 
    A parabola.
+
+## 14.3 Analyzing the Performance of the Selection Sort Algorithm
+
+7. If you increase the size of a data set tenfold, how much longer does it take to sort it with the selection sort algorithm?
+
+   100 times as long.
+
+8. How large does $n$ need to be so that $\frac{1}{2} n^2$ is bigger than $\frac{5}{2} n - 3$?
+
+   $n$ needs to be greater than 3.
+
+9. Section 6.3.6 has two algorithms for removing an element from an array of length $n$. How many array visits does each algorithm require on average?
+
+   The first requires $1$ visit, and the second requires $n - 2$.
+
+10. Describe the number of array visits in Self Check 9 using the big-Oh notation.
+
+    The first takes $O(1)$ and the second takes $O(n)$.
+
+11. What is the big-Oh running time of checking whether an array is already sorted?
+
+    $O(n)$.
+
+12. Consider this algorithm for sorting an array. Set $k$ to the length of the array. Find the maximum of first $k$ elements. Remove it, using the second algorithm of Section 6.3.6. Decrement $k$ and place the removed element into the $k$th position. Stop if $k$ is 1. What is the algorithm's running time in big-Oh notation?
+
+    $O(n^2)$.
