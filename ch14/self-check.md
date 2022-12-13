@@ -98,3 +98,61 @@
 20. Suppose you need to look through a sorted array with 1,000,000 elements to find a value. Using the binary search algorithm, how many records do you expect to search before finding the value?
 
     About 20 records.
+
+## 14.7 Problem Solving: Estimating the Running Time of an Algorithm
+
+21. What is the "light bulb pattern" of visits in the following algorithm to check whether an array is a palindrome?
+    ```java
+    for (int i = 0; i < a.length / 2; i++)
+    {
+        if (a[i] != a[a.length - 1 - i]) { return false; }
+    }
+    ```
+    
+    Two light bulbs will be lighted at each time from the start to the middle of array and symmetric.
+
+22. What is the big-Oh running time of the following algorithm to check whether the first elements is duplicated in an array?
+    ```java
+    for (int i = 1; i < a.length; i++)
+    {
+        if (a[0] == a[i]) { return true; }
+    }
+    ```
+    
+    $O(n)$.
+
+23. What is the big-Oh running time of the following algorithm to check whether an array has a duplicate value?
+    ```java
+    for (int i = 0; i < a.length; i++)
+    {
+        for (int j = i + 1; j < a.length; j++)
+        {
+            if (a[i] == a[j]) { return true; }
+        }
+    }
+    return false;
+    ```
+    
+    $O(n^2)$.
+
+24. Describe an $O(nlog(n))$ algorithm for checking whether an array has duplicates.
+
+    First sort the array by quick sort, then visit the elements one by one and check if it's the same with its next one.
+
+25. What is the big-Oh running time of the following algorithm to find an element in an $n \times n$ array?
+    ```java
+    for (int i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (a[i][j] == value) { return true; }
+        }
+    }
+    return false;
+    ```
+    
+    $O(n^2)$.
+
+26. If you apply the algorithm of Section 14.7.4 to an $n \times n$ array, what is the big-Oh efficiency of finding the most frequent element in terms of $n$?
+
+    $O(n^2log(n))$.
