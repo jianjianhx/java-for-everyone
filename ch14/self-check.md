@@ -84,3 +84,17 @@
 17. If you double the size of an array, how much longer will the merge sort algorithm take to sort the new array?
 
     (2n * log(2n)) / (n * log(n))
+
+## 14.6 Searching
+
+18. Suppose you need to look through 1,000,000 records to find a telephone number. How many records do you expect to search before finding the number?
+
+    On average, you'd make 500,000 comparisons.
+
+19. Why can't you use a "for each" loop `for (int element : a)` in the search method?
+
+    Because even if you find the element, you cannot get the index.
+
+20. Suppose you need to look through a sorted array with 1,000,000 elements to find a value. Using the binary search algorithm, how many records do you expect to search before finding the value?
+
+    About 20 records.
