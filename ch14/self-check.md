@@ -156,3 +156,21 @@
 26. If you apply the algorithm of Section 14.7.4 to an $n \times n$ array, what is the big-Oh efficiency of finding the most frequent element in terms of $n$?
 
     $O(n^2log(n))$.
+
+## 14.7 Sorting and Searching in the Java Library
+
+27. Why can't the `Arrays.sort` method sort an array of `Rectangle` objects?
+
+    `Rectangle` doesn't implement `Comparable` interface.
+
+28. What steps would you need to take to sort an array of `BankAccount` objects by increasing balance?
+
+    Let `BankAccount` implement `Comparable` and compare the balances inside the `compareTo` function.
+
+29. Why is it useful that the `Arrays.binarySearch` method indicates the position where a missing element should be inserted?
+
+    You can insert the value after you don't find it.
+
+30. Why does `Arrays.binarySearch` return $-k-1$ and not $-k$ to indicate that a value is not present and should be inserted before position $k$?
+
+    Because then you cannot know whether it's found at index 0 or it should be inserted before position 0.
